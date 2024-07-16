@@ -1,0 +1,678 @@
+/* This code was written by ankyie: https://github.com/ankyie */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --box-back: #121212;
+    --box-back2: #3d3d3d;
+    --box-back3: #222222;
+    --spotify: #1db954;
+    --spotify-dark: #158249;
+    --text2: rgb(172, 172, 172);
+    --transition: all 250ms ease-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    color: white;
+    background-color: black;
+}
+
+/* Entire container  */
+.container {
+    margin: 5px;
+    gap: 6px;
+}
+
+/* Left starts here  */
+.left {
+    width: 24%;
+}
+
+/* Left top section  */
+.homesearch {
+    padding: 1rem;
+    background-color: var(--box-back);
+}
+
+.homesearch * {
+    margin: 7px 0px;
+}
+
+.homesearch div *:hover {
+    cursor: pointer;
+}
+
+.hambur-close {
+    justify-content: space-between;
+}
+
+.cancel {
+    display: none;
+}
+
+.home {
+    gap: 20px;
+}
+
+.home:hover {
+    transition: all 250ms ease-in;
+    text-decoration: underline;
+}
+
+.search {
+    gap: 20px;
+    color: var(--text2);
+}
+
+.search:hover span {
+    color: white;
+    transition: all 250ms ease-in;
+    text-decoration: underline;
+}
+
+.search img {
+    filter: invert(66%);
+}
+
+.search:hover img {
+    filter: invert(100%);
+    transition: all 250ms ease-in;
+}
+
+/* Left middle/Library here  */
+.library {
+    background-color: var(--box-back);
+    margin-top: 6px;
+    height: 58.5vh;
+    padding: 12px;
+    position: relative;
+}
+
+.lib-top {
+    justify-content: space-between;
+    padding: 6px;
+}
+
+.lib-icons {
+    gap: 10px;
+}
+
+.lib-icons span {
+    color: var(--text2);
+}
+
+.lib-icons:hover span {
+    color: white;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.lib-icons:hover img {
+    filter: invert(100%);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.add-to-lib {
+    width: 1rem;
+    padding: 6px;
+}
+
+.add-to-lib:hover {
+    background-color: #1a1a1a;
+    border-radius: 50%;
+}
+
+.add-to-lib:hover * {
+    cursor: pointer;
+    filter: invert(90%);
+}
+
+/* songs playlist */
+.songs {
+    height: 45vh;
+    overflow: auto;
+}
+
+.songlist>* {
+    margin: 6px;
+}
+
+.select-a-album{
+    padding: 6px;
+    background-color: var(--box-back3);
+    min-height: 10rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    /* text-align: center; */
+}
+
+.list {
+    justify-content: space-between;
+    padding: 6px;
+    background-color: var(--box-back3);
+    font-size: small;
+    list-style-type: none;
+    height: 4rem;
+    transition: var(--transition);
+}
+
+.list:hover {
+    cursor: pointer;
+    background-color: var(--box-back2);
+}
+
+.list-left {
+    gap: 8px;
+    width: 60%;
+}
+
+.footerlinks {
+    height: auto;
+    gap: 6px 16px;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 2%;
+}
+
+.footerlinks a {
+    text-decoration: none;
+    color: var(--text2);
+    font-size: 0.7rem;
+}
+
+.footerlinks a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+/* Right part starts here  */
+.right {
+    width: 76%;
+    background-color: var(--box-back);
+}
+
+/* navbar  */
+.navbar {
+    justify-content: space-between;
+    padding: 13px;
+    height: 56px;
+    /* position: sticky; */
+}
+
+
+.hamburger-icons>* {
+    width: 1rem;
+    height: 1rem;
+    margin: 0px 6px;
+    border-radius: 50%;
+    background-color: rgb(245, 245, 245);
+    padding: 8px;
+}
+
+.hamburger-icons>*:hover {
+    cursor: pointer;
+}
+
+
+.hamburger-menu {
+    display: none;
+    width: 1rem;
+    height: 1rem;
+    margin: 0px 6px;
+    border-radius: 50%;
+    background-color: rgb(245, 245, 245);
+    padding: 8px;
+}
+
+.hamburger-menu:hover {
+    cursor: pointer;
+}
+
+.sign * {
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 7rem;
+    padding: 1rem;
+    border-radius: 26px;
+    margin: 0rem 0.5rem;
+}
+
+.SignUp {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--box-back);
+    color: var(--text2);
+}
+
+.SignUp:hover {
+    cursor: pointer;
+    font-size: 1.07rem;
+    color: white;
+    transition: var(--transition);
+}
+
+.LogIn {
+    font-family: "Roboto", sans-serif;
+    background-color: white;
+}
+
+.LogIn:hover {
+    cursor: pointer;
+    font-size: 1.07rem;
+    transition: var(--transition);
+}
+
+/* Playlists  */
+.playlist-cont {
+    padding: 23px;
+    height: 67vh;
+    overflow: auto;
+}
+
+.playlist-cont h1 {
+    margin-bottom: 23px;
+}
+
+.card-cont {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-height: 55vh;
+    overflow: auto;
+}
+
+.card {
+    width: 10rem;
+    padding: 12px;
+    flex-direction: column;
+    gap: 4px;
+    background-color: #222222;
+}
+
+.card:hover {
+    cursor: pointer;
+    background-color: #3d3d3d;
+    transition: var(--transition);
+}
+
+.image-cont {
+    position: relative;
+}
+
+.image{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.hoverplay img{
+    background-color: var(--spotify);
+    position: absolute;
+    bottom: 7px;
+    right: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 12px;
+    visibility: hidden;
+}
+
+.card:hover .hoverplay img{
+    visibility: visible;
+    bottom: 12px;
+    transition: var(--transition);
+}
+
+.card:active .hoverplay img{
+    background-color: var(--spotify-dark);
+}
+
+.card h2 {
+    font-size: 0.9rem;
+}
+
+.card p {
+    font-size: 0.8rem;
+    color: var(--text2);
+}
+
+/* footer stuff  */
+.footer {
+    padding: 1rem;
+}
+
+.footer-top {
+    justify-content: space-between;
+}
+
+.footertexts {
+    gap: 3rem;
+}
+
+.footertexts h3 {
+    font-size: 0.9rem;
+}
+
+.footertexts>* {
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footertexts a {
+    text-decoration: none;
+    color: var(--text2);
+}
+
+/* footer top right  */
+.footer-right {
+    gap: 8px;
+}
+
+.footer-right>* {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    border-radius: 50%;
+    background-color: #3d3d3d;
+    height: 23px;
+    width: 23px;
+}
+
+.footer-right>*:hover {
+    background-color: #5c5c5c;
+    transition: var(--transition);
+}
+
+.footer-right a img {
+    width: 16px;
+}
+
+.hbar {
+    border: 1px solid #3d3d3d;
+    margin: 1rem 0rem;
+}
+
+.footer-bottom {
+    color: var(--text2);
+    font-size: small;
+}
+
+/* player starts here  */
+.player {
+    height: 12vh;
+    position: relative;
+    margin: 6px;
+    padding: 12px;
+    background-color: var(--box-back);
+}
+
+.playerbox{
+    flex-direction: column;
+    justify-content: center;
+}
+
+.playertop {
+    justify-content: space-between;
+}
+
+.songname{
+    width: 40%;
+}
+
+.timevol {
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.volume {
+    gap: 0.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.volume-btn:hover {
+    cursor: pointer;
+}
+
+#volumebar:hover{
+    cursor: pointer;
+}
+
+/* player buttons  */
+.playerbtns {
+    position: relative;
+    justify-content: center;
+    bottom: 3rem;
+}
+
+.playerbtns>* {
+    padding: 6px;
+}
+
+.playerbtns>*:hover {
+    background-color: #ffffff;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.playerbtns div:hover * {
+    filter: invert(0%);
+    transition: var(--transition);
+}
+
+.playerbtns div img {
+    width: 32px;
+}
+
+
+/* playbar  */
+.playerbar {
+    position: absolute;
+    bottom: 15%;
+    width: 97vw;
+    height: 12%;
+}
+
+.playerbar * {
+    transition: var(--transition);
+}
+
+.playerbar *:hover {
+    cursor: pointer;
+}
+
+.entirebar {
+    position: absolute;
+    bottom: 33%;
+    width: 100%;
+    height: 6px;
+    background-color: #3d3d3d;
+}
+
+.completebar {
+    position: absolute;
+    bottom: 33%;
+    height: 6px;
+    background-color: var(--spotify);
+}
+
+.circle {
+    position: absolute;
+    bottom: 0%;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: var(--spotify-dark);
+}
+
+.circle:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    /* body {
+    } */
+
+    .left {
+        width: 70%;
+        position: absolute;
+        left: -120%;
+        z-index: 3;
+        transition: var(--transition);
+    }
+
+    .library {
+        height: 76vh;
+    }
+
+    .songs{
+        height: 62vh;
+    }
+
+    .cancel {
+        display: inline;
+        position: relative;
+        right: 1rem;
+    }
+
+    .right {
+        width: 99%;
+    }
+
+    .hamburger-menu {
+        display: inline;
+    }
+
+    .playerbar {
+        width: 96vw;
+    }
+
+}
+
+@media only screen and (max-width: 640px) {
+/* 
+    .library {
+        height: 45vh;
+    }
+
+    .songs{
+        height: 33vh;
+    } */
+
+    .playlist-cont {
+        height: 56vh;
+    }
+
+    .player {
+        height: 25vh;
+    }
+
+    .playertop {
+        flex-direction: column;
+        justify-content: left;
+        gap: 5rem;
+    }
+
+    .songname{
+        width: auto;
+    }
+
+    .timevol {
+        align-items: center;
+    }
+
+    
+    .playerbtns{
+        bottom: 6.8rem;
+    }
+
+    .playerbar {
+        width: 90vw;
+    }
+
+    .circle {
+        bottom: 10%;
+    }
+
+    .footer-top{
+        flex-direction: column;
+    }
+
+    .footertexts{
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .left {
+        width: 100%;
+    }
+
+    /* .navbar{
+        flex-direction: column;
+    } */
+
+    .playlist-cont h1{
+        text-align: center;
+    }
+
+    .card-cont{
+        justify-content: center;
+        width: 100%;
+    }
+
+    .card{
+        width: auto;
+    }
+
+    .playertop {
+        gap: 4rem;
+    }
+    
+    .playerbtns {
+        bottom: 6.4rem;
+    }
+
+    /* .playerbar {
+        bottom: 10%;
+    } */
+
+}
+
+@media (max-width: 480px) {
+    .hamburger-menu{
+        margin: 0px 2px;
+    }
+
+    .hamburger-icons *{
+        width: 0.7rem;
+        height: 0.7rem;
+    }
+
+    .sign > *{
+        width: 5rem;
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 330px) {
+    .sign > *{
+        width: 4rem;
+        font-size: 0.7rem;
+        padding: 0.5rem;
+        margin: 0rem 0.1rem;
+    }
+}

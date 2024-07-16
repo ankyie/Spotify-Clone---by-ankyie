@@ -1,0 +1,62 @@
+/* This code was written by ankyie: https://github.com/ankyie */
+    /* Scrollbar Track */
+    ::-webkit-scrollbar {
+        width: 10px; /* width of the scrollbar */
+    }
+
+    /* Scrollbar Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #444; /* color of the scrollbar handle */
+        border-radius: 5px; /* roundness of the scrollbar handle */
+    }
+
+    /* Scrollbar Track when not hovering over it */
+    ::-webkit-scrollbar-track {
+        background: #333; /* color of the scrollbar track */
+    }
+
+    /* Scrollbar Handle when hovering over it */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #666; /* color of the scrollbar handle on hover */
+    }
+
+    /* Scrollbar Handle when clicked */
+    ::-webkit-scrollbar-thumb:active {
+        background: #888; /* color of the scrollbar handle when clicked */
+    }
+
+.flex{
+    display: flex;
+}
+
+.justify{
+    justify-content: center;
+}
+
+.align{
+    align-items: center;
+}
+
+.smallimg{
+    width: 23px;
+}
+
+.red{
+    border: 2px solid red;
+}
+
+.white{
+    filter: invert(100%);
+}
+
+.grey{
+    filter: brightness(0) saturate(100%) invert(77%) sepia(8%) saturate(7%) hue-rotate(349deg) brightness(91%) contrast(83%);
+}
+
+.bodrad{
+    border-radius: 7px;
+}
+
+.bold{
+    font-weight: bold;
+}
